@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>My Expenses</h1>
+    <a href="/add">Add New</a>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.amount }} | {{ expense.category }} | {{ expense.description }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
