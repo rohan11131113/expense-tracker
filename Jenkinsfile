@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Run Docker Container') {
             steps {
-                sh 'docker run -d -p 5002:5002 expense-tracker'
+                sh 'docker run -d -p 5003:5003 expense-tracker'
             }
         }
     }
